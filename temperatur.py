@@ -9,11 +9,14 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 import time
 
-driver = webdriver.Chrome()
-driver.get("http://ny.ugdao.com/")
 
-user = "任锐"
-passw = '3657308'
+#use username password of the account, and enter the url
+user = ""
+passw = ""
+url = ""
+
+driver = webdriver.Chrome()
+driver.get(url)
 
 driver.find_element_by_id("username").send_keys(user)
 driver.find_element_by_id("password").send_keys(passw)
@@ -40,6 +43,6 @@ for handle in alltab:
 
 lurudata = driver.find_element_by_xpath('//*[@id="dt"]/tbody/tr[22]/td/a')
 lurudata.click()
-
+#以下数据是录入数据需要调用的element和xpath
 录入数据的id(dkhvalue,clsjvalue, wdvalue, sdvalue)
 确定按钮xpath（//*[@id="input_Wsd"]/div/table/tbody/tr[6]/th/input[1]）
